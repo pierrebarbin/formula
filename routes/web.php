@@ -7,6 +7,10 @@ Route::get('/', function () {
     return Inertia::render('welcome');
 })->name('home');
 
+Route::get('/flow', function () {
+    return Inertia::render('flow');
+})->name('flow');
+
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('dashboard', function () {
         return Inertia::render('dashboard');
